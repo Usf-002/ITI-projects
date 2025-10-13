@@ -1,0 +1,4 @@
+<p>Hello and Welcome to our {{ x | uppercase }}</p>
+<button (click)="sales()">Sale!?</button>
+<ng-container *ngIf="sale; else nosale"><p>Sale is ON</p></ng-container>
+<ng-template #nosale><p>Sale is OFF</p></ng-template>

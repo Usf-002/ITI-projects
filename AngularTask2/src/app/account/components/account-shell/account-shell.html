@@ -1,0 +1,23 @@
+<div class="container mt-5">
+  <h2 class="text-center text-primary mb-4">My Account</h2>
+
+  <ul class="nav nav-tabs justify-content-center mb-4">
+    <li class="nav-item">
+      <a
+        class="nav-link"
+        routerLink="profile"
+        routerLinkActive="active"
+        [routerLinkActiveOptions]="{ exact: true }"
+      >
+        Profile
+      </a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" routerLink="settings" routerLinkActive="active"> Settings </a>
+    </li>
+  </ul>
+
+  <div class="card shadow-sm p-4">
+    <router-outlet></router-outlet>
+  </div>
+</div>
