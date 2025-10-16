@@ -1,0 +1,55 @@
+<mat-card class="auth-card mat-elevation-z4">
+  <h2 class="card-title">Create your account</h2>
+
+  <form [formGroup]="signupForm" (ngSubmit)="submitRegistration()" class="auth-form">
+    <mat-form-field appearance="outline" class="stretch">
+      <mat-label>Full name</mat-label>
+      <input matInput formControlName="fullName" />
+      <mat-error *ngIf="signupForm.get('fullName')?.invalid && signupForm.get('fullName')?.touched">
+        Name is required.
+      </mat-error>
+    </mat-form-field>
+
+    <mat-form-field appearance="outline" class="stretch">
+      <mat-label>Email</mat-label>
+      <input matInput formControlName="email" type="email" autocomplete="email" />
+      <mat-error *ngIf="signupForm.get('email')?.invalid && signupForm.get('email')?.touched">
+        Enter a valid email address.
+      </mat-error>
+    </mat-form-field>
+
+    <mat-form-field appearance="outline" class="stretch">
+      <mat-label>Username</mat-label>
+      <input matInput formControlName="handle" autocomplete="username" />
+      <mat-hint align="start">No spaces allowed</mat-hint>
+      <mat-error *ngIf="signupForm.get('handle')?.invalid && signupForm.get('handle')?.touched">
+        Username is required and cannot contain spaces.
+      </mat-error>
+    </mat-form-field>
+
+    <mat-form-field appearance="outline" class="stretch">
+      <mat-label>Password</mat-label>
+      <input matInput type="password" formControlName="pass" autocomplete="new-password" />
+      <mat-error *ngIf="signupForm.get('pass')?.invalid && signupForm.get('pass')?.touched">
+        8+ chars with upper, lower, number, and special character.
+      </mat-error>
+    </mat-form-field>
+
+    <mat-form-field appearance="outline" class="stretch">
+      <mat-label>Confirm password</mat-label>
+      <input matInput type="password" formControlName="confirmPass" autocomplete="new-password" />
+      <mat-error *ngIf="signupForm.hasError('mismatch') && signupForm.get('confirmPass')?.touched">
+        Passwords must match.
+      </mat-error>
+    </mat-form-field>
+
+    <button mat-raised-button color="primary" class="action" type="submit" [disabled]="signupForm.invalid">
+      Sign up
+    </button>
+  </form>
+
+  <p class="hint">
+    Already registered?
+    <a routerLink="/login">Sign in</a>
+  </p>
+</mat-card>
