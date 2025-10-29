@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="Better Call AI logo">
+  <defs>
+    <linearGradient id="g" x1="0" x2="1">
+      <stop offset="0%" stop-color="#d81e24"/>
+      <stop offset="100%" stop-color="#f8c21c"/>
+    </linearGradient>
+  </defs>
+  <rect rx="12" ry="12" width="64" height="64" fill="#0b0b0b"/>
+  <!-- Scales of justice stylized as AI chip -->
+  <g transform="translate(8,8)">
+    <rect x="8" y="8" width="40" height="40" rx="8" ry="8" fill="none" stroke="url(#g)" stroke-width="3"/>
+    <circle cx="28" cy="28" r="6" fill="#f8c21c"/>
+    <path d="M28 12v16" stroke="#d81e24" stroke-width="3" stroke-linecap="round"/>
+    <path d="M12 20h16M28 20h16" stroke="#f8c21c" stroke-width="3" stroke-linecap="round"/>
+    <path d="M16 36c4 0 6-4 6-8H10c0 4 2 8 6 8ZM40 36c4 0 6-4 6-8H34c0 4 2 8 6 8Z" fill="none" stroke="#d81e24" stroke-width="2"/>
+  </g>
+</svg>
