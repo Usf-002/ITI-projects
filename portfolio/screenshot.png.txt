@@ -1,0 +1,17 @@
+Screenshot Instructions:
+=======================
+
+To add a theme screenshot:
+1. Create a PNG image file (1200x900 pixels recommended)
+2. Name it: screenshot.png
+3. Place it in the theme root directory (same folder as style.css)
+
+The screenshot will appear in the WordPress admin theme selection screen.
+
+You can create a screenshot using:
+- Screenshot tool (Windows Snipping Tool, macOS Screenshot)
+- Any image editing software
+- Online screenshot tools
+
+Recommended dimensions: 1200x900 pixels
+Format: PNG
